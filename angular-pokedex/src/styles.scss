@@ -1,0 +1,15 @@
+@use './config-scss/reset.scss';
+@use './config-scss/varibles.scss';
+@use './config-scss/rem-calc.scss';
+
+
+html{
+    font-family: 'Itim', cursive;
+    background-color: var(--branco);
+}
+main{
+    width: rem-calc(1200);
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+}
