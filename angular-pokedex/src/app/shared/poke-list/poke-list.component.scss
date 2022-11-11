@@ -1,0 +1,102 @@
+@import '../../../config-scss/rem-calc.scss';
+:host {
+
+
+    .listagem {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .pokemon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-decoration: none;
+        width: 33%;
+        
+        
+    }
+        .poke-stats{
+            width: rem-calc(280);
+            height: rem-calc(280);
+            border: 2px solid #fff;
+            position: relative;
+            margin: rem-calc(80) rem-calc(50);
+        }
+            ul {
+                display: flex;
+                position: relative;
+                justify-content: flex-end;
+            }
+                div{
+                    width: rem-calc(70) ;
+                    height: rem-calc(70);
+                    background-color: var(--secundary-color);
+                    border-radius: rem-calc(36);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--branco);
+                    font-size: rem-calc(32);
+                    position: absolute;
+                    left: rem-calc(-30);
+                    top: rem-calc(-30);
+                }
+
+                .tipo1 {
+                    width: rem-calc(100);
+                    height: rem-calc(30);
+                    background-color: #FFCB05;
+                    border-radius: rem-calc(8);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #21386E;
+                    font-size: rem-calc(24);
+                    margin-right: rem-calc(8);
+                    position: absolute;
+                    top: rem-calc(-15);
+                    left: rem-calc(70);
+                }
+                .tipo2 {
+                    width: rem-calc(100);
+                    height: rem-calc(30);
+                    background-color: #FFCB05;
+                    border-radius: rem-calc(8);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #21386E;
+                    font-size: rem-calc(24);
+                    margin-right: rem-calc(8);
+                    position: absolute;
+                    top: rem-calc(-15);
+                    left: rem-calc(175);
+                }
+
+            h2 {
+                width: rem-calc(250);
+                height: rem-calc(65);
+                background-color: #21386E;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: rem-calc(36);
+                color: var(--branco);
+                position: absolute;
+                top: rem-calc(260);
+                left: rem-calc(14);
+                box-shadow: 4px 6px 13px 0px #000;
+            }
+            
+                img {
+                    width: rem-calc(250);
+                    height: rem-calc(250);
+                    position: absolute;    
+                    top: 15px;
+                    left: 15px;
+
+                }
+}
