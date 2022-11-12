@@ -1,0 +1,33 @@
+@import '../../../config-scss/rem-calc.scss';
+
+:host {
+
+    main {
+        display: flex;
+    }
+
+    .poke-filtros1 {
+        
+    }
+   
+
+    .poke-filtros {
+        width: 15vw;
+        height: 100vh;
+        
+        
+    }
+
+    .poke-body {
+        width: 70vw;
+        height: auto;
+    }
+
+    .poke-aleatorio {
+        width: 15vw;
+        height: 100vh;
+    }
+
+
+
+}

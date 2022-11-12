@@ -13,10 +13,18 @@
                 </ul>
                 <img 
                 [src]="pokemon.status.sprites.other.dream_world.front_default" 
-                alt="pokemon.name"
+                alt="pokemon.name" class="img-pokemon"
                 >
                 <h2>{{pokemon.name}}</h2>
             </section>
         </a>
     </ng-template>
+    <img 
+    src="assets/svg/erro-carregar-pokemons.svg"
+    alt="erro ao carregar os pokémons"
+    *ngIf="error"
+    >
 </section>
+
+
+

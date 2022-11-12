@@ -1,0 +1,14 @@
+@import '../../../config-scss/rem-calc.scss';
+
+:host {
+
+    .poke-background-filtro{
+        position: fixed;
+        width: 15vw;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+
+            
+    }
+
+}
