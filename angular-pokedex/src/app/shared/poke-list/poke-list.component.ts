@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { filter } from 'rxjs';
 import { PokeApiService } from 'src/app/service/poke-api.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DetailsComponent } from 'src/app/pages/details/details.component';
+
 
 @Component({
   selector: 'poke-list',
@@ -14,8 +17,15 @@ export class PokeListComponent implements OnInit {
   public error :boolean = false;
 
   constructor(
-    private pokeApiService: PokeApiService
+    private pokeApiService: PokeApiService,
+    private matDialog: MatDialog
   ) { }
+
+  onOpenDialogClick():void {
+    this.matDialog.open(DetailsComponent,{
+    width:'43vw',
+    height:'80%'});
+  }
 
   ngOnInit(): void {
     this.pokeApiService.apiListALLPokemons.subscribe(

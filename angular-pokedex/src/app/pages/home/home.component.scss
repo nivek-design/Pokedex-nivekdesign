@@ -4,18 +4,12 @@
 
     main {
         display: flex;
-    }
-
-    .poke-filtros1 {
-        
+        font-family: 'Itim', cursive;
     }
    
-
     .poke-filtros {
         width: 15vw;
-        height: 100vh;
-        
-        
+        height: 100vh; 
     }
 
     .poke-body {
@@ -30,4 +24,25 @@
 
 
 
+}
+
+@media screen and (max-width: 1280px)  {
+
+    main {
+        justify-content: center;
+    }
+    .poke-filtros {
+        display: none;
+    }
+
+    .poke-body {
+        width: 100vw;
+        height: auto;
+    }
+
+
+    .poke-aleatorio {
+        display: none;
+    }
+    
 }

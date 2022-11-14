@@ -1,7 +1,5 @@
- <ng-template [ngIf]="loading">
-
-  <body >
-
+<body >
+  <img src="assets\img/arena-pokemon.jpg" alt="" class="background kenburns-bottom">
     <div class="sair">
       <a [routerLink]="['']" class="x">
         <img src="assets/svg/voltar.svg" alt="botão voltar para home">
@@ -26,11 +24,11 @@
 
             <div class="stats-divisao">
               <h2>Height</h2>
-              <p>0.7 m</p>
+              <p>{{pokemon[0].height}} m</p>
             </div>
             <div class="stats-divisao">
-              <h2>Wight</h2>
-              <p>6.9 kg</p>
+              <h2>Weight</h2>
+              <p>{{pokemon[0].weight}} kg</p>
             </div>
             <div class="stats-divisao">
               <h2>Category</h2>
@@ -38,7 +36,7 @@
             </div>
             <div class="stats-divisao">
               <h2>Abilities</h2>
-              <p>Overgrow</p>
+              <p>{{pokemon[0].abilities[0].ability.name}}</p>
             </div>
 
           </div>
@@ -46,8 +44,8 @@
             <div >
               <h2>Type</h2>
               <div>
-                <h2 class="button ">Grass</h2>
-                <h2 class="button">Poison</h2>
+                <h2 class="button ">{{pokemon[0].types[0].type.name}}</h2>
+                <h2 class="button">{{pokemon[0].types[1].type.name}}</h2>
               </div>
             </div>
 
@@ -78,14 +76,19 @@
         <div class="stats-right">
           <ol>
             <li *ngFor="let value of pokemon[0].stats">
-                <h2>{{ value.stat.name }}</h2>
-              <div class="barra-stats-poke">
-                {{ value.base_stat }}
+              <div class="stats-name">
+                <h2>{{ value.stat.name }} </h2>
+                <h2>{{ value.base_stat }}</h2>
               </div>
+              
+              <mat-progress-bar  color="ThemePalette" mode="determinate" value="{{ value.base_stat }}" class="barra-stats-poke" >
+                
+              </mat-progress-bar>
             </li>
-          </ol>
+          </ol> 
 
         </div>
+        
       </div>
     </div>
   </body>
@@ -93,4 +96,4 @@
   
         
             
-</ng-template> 
+

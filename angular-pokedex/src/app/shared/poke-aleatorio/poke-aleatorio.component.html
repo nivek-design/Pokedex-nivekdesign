@@ -1,18 +1,21 @@
-<div class="poke-aleatorio">
-    <div class="aleatorio-nome">
-        <h2>Mewthow</h2>
+<section>
+    <div class="background-pokebola">
+        <h1 class="slide-in-blurred-top">Mewtwo</h1>
+        <img src="assets/svg/background-pokebola.svg" alt="">
+        <h3 class="slide-in-blurred-right">150</h3>
     </div>
-    <div class="aleatorio-id">
-        <p>150</p>
+    <div class="background-pokemon">
+        <img src="assets/svg/mewtwo.svg" alt="" class="slide-in-elliptic-right-fwd">
     </div>
-    <img src="assets/svg/background-pokebola.svg" alt="background pokebola">
-    <img src="assets/svg/mewtwo.svg" alt="pokemon mewtwo" class="mewtwo">
-    
-    <div class="detail-pokedex">
-        <img src="assets/svg/pokedex.svg" alt="pokedex" class="pokedex">
-        <h2>Type</h2>
-        <p>Psychic</p>
-        <img src="assets/svg/mewtwo.svg" alt="pokemon mewtwo" class="mewtwo2">
+    <div class="background-pokedex">
+        <img src="assets/svg/pokedex.svg" alt="" class="pokedex tilt-in-fwd-bl">
+        <img src="{{pokemon.status.sprites.other.dream_world.front_default}}" alt="" class="mewtwo-pokedex scale-in-ver-center">
+        <div class="pokedex-stats scale-in-ver-center">
+            <h2>Type</h2>
+            <p>{{pokemon[0].types[0].type.name}}</p>
+        </div>
+    </div>
 
-    </div>
-</div>
+    
+
+</section>

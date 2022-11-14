@@ -6,7 +6,7 @@ import { map, Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class PokeApiService {
-  private url: string = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=151'
+  private url: string = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=251'
 
   constructor(
     private http: HttpClient

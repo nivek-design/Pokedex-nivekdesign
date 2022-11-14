@@ -36,20 +36,18 @@ $angular-pokedex-theme: mat.define-light-theme((
 @import './config-scss/reset.scss';
 @import './config-scss/varibles.scss';
 @import './config-scss/rem-calc.scss';
+@import './config-scss/efects.scss';
 
 
-html{
-    font-family: 'Itim', cursive;
-    background-color: var(--branco);
-}
+
 main{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     background-color: var(--primary-color);
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%;
+  font-family: 'Itim', cursive;
+  background-color: var(--branco);
+ }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

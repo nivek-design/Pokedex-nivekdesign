@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { forkJoin } from 'rxjs';
+import { PokeApiService } from 'src/app/service/poke-api.service';
+
 
 @Component({
   selector: 'poke-aleatorio',
@@ -7,9 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokeAleatorioComponent implements OnInit {
 
-  constructor() { }
+  public getAllPokemons: any;
+  private setAllPokemons: any;
+  public pokemon: any;
+
+
+
+  constructor(
+    private pokeApiService : PokeApiService
+
+  ) { }
 
   ngOnInit(): void {
+    this.pokeApiService.apiListALLPokemons.subscribe(
+      res => {
+
+        this.setAllPokemons = res.results;
+        this.getAllPokemons = this.setAllPokemons;
+      }
+
+    )
   }
+
+ 
 
 }

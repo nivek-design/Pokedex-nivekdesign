@@ -1,25 +1,55 @@
 <div class="poke-background-filtro">
-    
+    <img src="assets/svg/ash.svg" alt="ash">
+    <img src="assets/svg/pokebola.svg" alt="pokébola">
+
+
     <div class="habilidades">
-        <h2> Habilidades </h2>
-        <button>todos</button>
-    </div>
+        <mat-form-field class="example-chip-list" appearance="fill">
+            <mat-label>Habilidades</mat-label>
+            <mat-chip-list #chipList aria-label="Fruit selection">
+              <mat-chip
+                *ngFor="let habilidades of habilidades"
+                (removed)="remove(habilidades)">
+                {{habilidades}}
+                <button matChipRemove>
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip>
+              <input
+                placeholder="Selecione uma habilidade"
+                #fruitInput
+                
+                [matAutocomplete]="auto"
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+              <mat-option *ngFor="let habilidades of filterHabilidades | async" [value]="habilidades">
+                {{habilidades}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>   
+        </div>
+
+        
     <div class="altura">
-        <h2> Altura</h2>
-        <button type="button">Pequeno</button>
-        <button type="button">Médio</button>
-        <button type="button">Grande</button>
+        <h2>Altura</h2>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="bold" color="primary">Baixo</mat-button-toggle>
+            <mat-button-toggle value="italic">Médio</mat-button-toggle>
+            <mat-button-toggle value="underline">Alto</mat-button-toggle>
+          </mat-button-toggle-group>
     </div>
     <div class="peso">
-        <h2> Peso</h2>
-        <button type="button">Leve</button>
-        <button type="button">Médio</button>
-        <button type="button">Pesado</button>
+        <h2>Peso</h2>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="bold" color="primary">Leve</mat-button-toggle>
+            <mat-button-toggle value="italic">Médio</mat-button-toggle>
+            <mat-button-toggle value="underline">Pesado</mat-button-toggle>
+          </mat-button-toggle-group>
     </div>
-    <div class="redefinir-pesquisar">
-        <button type="button"> Redefinir</button>
-        <button type="button"> Pesquisar</button>
-    </div> 
+   
     
 </div>
 

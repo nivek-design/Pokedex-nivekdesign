@@ -8,13 +8,16 @@
         justify-content: center;
         align-items: center;
     }
+
+    
+
     .pokemon{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         text-decoration: none;
-        width: 33%;
+        
         
         
     }
@@ -99,4 +102,6 @@
                     left: 15px;
 
                 }
+
+                
 }

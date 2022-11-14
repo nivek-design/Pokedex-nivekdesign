@@ -1,90 +1,107 @@
 @import '../../../config-scss/rem-calc.scss';
+@import '../../../styles.scss';
+@import '../../../config-scss/efects.scss';
 
 :host {
-    .poke-aleatorio {
-        position: fixed;
-        min-width: 15vw;
+    section {
+        width: 100%;
         height: 100%;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255) ;
+        position: fixed;
+        
+       
     }
 
-        .aleatorio-nome {
-            position: absolute;
-            top: rem-calc(-170);
-            right: rem-calc(-60);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 42px;
-            color: var(--branco);
-        }
 
-        .aleatorio-id {
-            width: rem-calc(58);
-            height:  rem-calc(58);
-            background-color: rgb(255, 255, 255);
-            position: absolute;
-            top: rem-calc(212);
-            right: rem-calc(115);
-            border-radius: rem-calc(36);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 28px;
-            
-        }
-            h2 {
-                color: black;
-            }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        .mewtwo {
-            position: absolute;
-            right: rem-calc(20);
-            top: rem-calc(250);
-            width: 120%;
-            height: auto;
-            
-        }
-
-        
-
-        .detail-pokedex {
+        .background-pokebola {
+            height: 40%;
             position: relative;
-            width: 100%;
-            height: 100%;
-        }       
+            
+        }
 
-            .pokedex {
+            h1 {
                 position: absolute;
-                top: rem-calc(100);
-                right:  rem-calc(10);
-                width: 150%;
+                top: rem-calc(90);
+                left: rem-calc(70);
+                color: var(--branco);
+                z-index: 10;
+                font-size: rem-calc(48);
+                font-family: 'Itim', cursive;
+                 
+            }
+            
+             img{
+                width: auto;
+                height: 50%;
+                position: fixed;
+            
+            }
+
+             h3 {
+                position: absolute;
+                top: 227px;
+                left: 122px;
+                font-size: 28px;
+                font-weight: 700;
+                font-family: 'Itim', cursive;
+            
+            }
+
+        .background-pokemon {
+            position: relative;
+            height: 30%;
+        }
+
+        .background-pokemon img{
+            width: auto;
+            height: auto;
+            position: absolute;
+            left: -100px;
+            top: -140px;
+        
+        }
+
+
+        .background-pokedex {
+            height: 30%;
+            position: relative;
+        }
+            .pokedex{
+                width: auto;
                 height: auto;
-                transform: rotate(180);
+                position: absolute;
+                left: -150px;
+                top: -100px;
+            
+            }
+
+            .mewtwo-pokedex {
+                position: absolute;
+                top: 80px;
+                left:-20px;
+                width: 70px;
+                height: 70px;
+                z-index: 100;
+            }
+
+            .pokedex-stats {
+                position: absolute;
+                top: 35px;
+                left: 130px;
+                width: 105px;
+                height: 50px;
+                z-index: 100;
+                color: var(--branco);
+            }
+
+                h2 {
+                    font-size: 12px;
+                    margin: 0;
+                    font-family: 'Itim', cursive;
                 }
-            h2 {
-                color: var(--branco);
-                position: absolute;
-                top: rem-calc(250) ;
-                right: rem-calc(120);
-            }
-            p {
-                color: var(--branco);
-                position: absolute;
-                top: rem-calc(275) ;
-                right: rem-calc(100);
-            }
-
-            .mewtwo2 {
-                width: 22%;
-                height: auto;
-                position: absolute;
-                top: rem-calc(287) ;
-                right: rem-calc(246);
-            }
+                p{
+                    font-size: 16px;
+                    margin: 0;
+                    font-family: 'Itim', cursive;
+                }
 }
