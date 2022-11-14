@@ -1,42 +1,96 @@
+ <ng-template [ngIf]="loading">
+
+  <body >
+
+    <div class="sair">
+      <a [routerLink]="['']" class="x">
+        <img src="assets/svg/voltar.svg" alt="botão voltar para home">
+      </a>
+
+    </div>
+   
 
 
-<main>
-
-    <ng-template [ngIf]="loading">
-        <section class="pokemon__names">
-          <h1 class="slideInLeft">{{pokemon[0].name}}</h1>
-          <h2 class="slideInRight">{{pokemon[1].names[0].name}}</h2>
-        </section>
-    
-        <section class="pokemon__status">
-          <img
-            [src]="pokemon[0].sprites.other.dream_world.front_default"
-            [alt]="pokemon[0].name"
-            class="slideInDown"
+    <div class="background-stats">
+      <div class="img-pokemon">
+        <img
+          [src]="pokemon[0].sprites.other.dream_world.front_default"
+          [alt]="pokemon[0].name"
+          class=""
           >
-    
-          <article class="pokemon__status__statistics fadeIn">
-            <section>
-              <h3>Estatísticas</h3>
-    
-              <ol>
-                <li *ngFor="let value of pokemon[0].stats">
-                    {{ value.stat.name }}
-    
-                  <strong>
-                    {{ value.base_stat }}
-                  </strong>
-                </li>
-              </ol>
-            </section>
-    
-            <a [routerLink]="['']" class="btn btn__secondary">
-              Voltar
-            </a>
-          </article>
-        </section>
-      </ng-template>
+          <h1 class="">{{pokemon[0].name}}</h1>
+      </div>
+      <div class="stats-pokemon">
+        <div class="stats-left">
+          <div class="stats-1">
 
-      
-    
-</main>
+            <div class="stats-divisao">
+              <h2>Height</h2>
+              <p>0.7 m</p>
+            </div>
+            <div class="stats-divisao">
+              <h2>Wight</h2>
+              <p>6.9 kg</p>
+            </div>
+            <div class="stats-divisao">
+              <h2>Category</h2>
+              <p>Seed</p>
+            </div>
+            <div class="stats-divisao">
+              <h2>Abilities</h2>
+              <p>Overgrow</p>
+            </div>
+
+          </div>
+          <div class="stats-2">
+            <div >
+              <h2>Type</h2>
+              <div>
+                <h2 class="button ">Grass</h2>
+                <h2 class="button">Poison</h2>
+              </div>
+            </div>
+
+            <div>
+              <h2>Weaknesses</h2>
+              <div>
+                <h2 class="button">Fire</h2>
+              </div>
+              <div>
+                <h2 class="button">Psychic</h2>
+              </div>
+              <div>
+                <h2 class="button">Flying</h2>
+              </div>
+              <div>
+                <h2 class="button">Ice</h2>
+              </div>
+            </div>
+
+          </div>
+
+        
+
+        </div>
+
+
+
+        <div class="stats-right">
+          <ol>
+            <li *ngFor="let value of pokemon[0].stats">
+                <h2>{{ value.stat.name }}</h2>
+              <div class="barra-stats-poke">
+                {{ value.base_stat }}
+              </div>
+            </li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+  
+        
+            
+</ng-template> 
