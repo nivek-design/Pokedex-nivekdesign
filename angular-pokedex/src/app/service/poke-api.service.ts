@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable, tap } from 'rxjs';
+import { map,tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokeApiService {
-  private url: string = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=251'
+  private url: string = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=151'
 
   constructor(
     private http: HttpClient

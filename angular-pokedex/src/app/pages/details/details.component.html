@@ -1,4 +1,6 @@
 <body >
+
+  <poke-header class="poke-header"></poke-header>
   <img src="assets\img/arena-pokemon.jpg" alt="" class="background kenburns-bottom">
     <div class="sair">
       <a [routerLink]="['']" class="x">
@@ -74,18 +76,21 @@
 
 
         <div class="stats-right">
-          <ol>
+          <ol >
             <li *ngFor="let value of pokemon[0].stats">
-              <div class="stats-name">
-                <h2>{{ value.stat.name }} </h2>
-                <h2>{{ value.base_stat }}</h2>
-              </div>
-              
-              <mat-progress-bar  color="ThemePalette" mode="determinate" value="{{ value.base_stat }}" class="barra-stats-poke" >
                 
+
+              <div class="stats-name" >
+                <h2>{{ value.stat.name }}</h2>
+                <h2> {{ value.base_stat }}</h2>
+                
+              </div>
+                <mat-progress-bar  color="ThemePalette" mode="determinate" value="{{ value.base_stat }}" class="barra-stats-poke" >
+
               </mat-progress-bar>
-            </li>
-          </ol> 
+              </li>
+            </ol> 
+            
 
         </div>
         

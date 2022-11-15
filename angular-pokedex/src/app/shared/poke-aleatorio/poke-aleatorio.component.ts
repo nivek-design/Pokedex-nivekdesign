@@ -11,26 +11,23 @@ import { PokeApiService } from 'src/app/service/poke-api.service';
 export class PokeAleatorioComponent implements OnInit {
 
   public getAllPokemons: any;
-  private setAllPokemons: any;
-  public pokemon: any;
-
-
 
   constructor(
-    private pokeApiService : PokeApiService
-
+    private pokeApiService: PokeApiService
   ) { }
 
   ngOnInit(): void {
     this.pokeApiService.apiListALLPokemons.subscribe(
       res => {
+        this.getAllPokemons = res.results;
+        
 
-        this.setAllPokemons = res.results;
-        this.getAllPokemons = this.setAllPokemons;
       }
-
+      
     )
-  }
+      }
+    
+  
 
  
 

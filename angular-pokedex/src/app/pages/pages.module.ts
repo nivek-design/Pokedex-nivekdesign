@@ -24,7 +24,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     CommonModule,
     RoutingModule,
     SharedModule,
-    MatProgressBarModule
+    MatProgressBarModule,
     
   ]
 })

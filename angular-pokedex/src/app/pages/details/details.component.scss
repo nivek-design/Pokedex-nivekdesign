@@ -232,13 +232,22 @@
 			.sair {
 				position: relative;
 			}
-			.x {
-				z-index: 100;
-				position: absolute;
-				top: -500px;
-				left: 1px;
-				text-decoration: none;
-			}
+				.x {
+					z-index: 100;
+					position: fixed;
+					top: 10px;
+					left: 350px;
+					text-decoration: none;
+					background-color: #21386E;
+					border-radius: 48px;
+					padding: .2em;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 40px;
+					height: 40px;
+				}
+			
 
 				
 
@@ -249,7 +258,7 @@
 				background-color: #000000;
 			}
 				.img-pokemon {
-					height: 50%;
+					height: 40%;
 				}
 					img {
 						width: auto;
