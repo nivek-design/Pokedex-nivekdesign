@@ -36,6 +36,19 @@
         margin: 2em 1em 2em 1em;
     }
 
+        .button-altura {
+            width: rem-calc(70);
+            background-color: black;
+            color: var(--branco);
+            height: rem-calc(30);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .button-altura:hover {
+                background-color: red;
+            }
+
         .altura > h2 {
             margin-bottom: .5em;
         }
