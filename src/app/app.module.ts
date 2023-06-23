@@ -13,6 +13,10 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 
+import { LazyLoadModule } from 'ng-lazy-load';
+
+
+
 
 
 //Components
@@ -33,6 +37,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatIconModule,
     MatIconModule,
     MatProgressBarModule,
+    LazyLoadModule
     
 
 

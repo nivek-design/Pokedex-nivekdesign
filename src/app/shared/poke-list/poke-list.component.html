@@ -1,9 +1,9 @@
 <poke-search (emmitSearch)="getSearch($event)" class="fade-in-fwd "></poke-search>
 
-<section class="listagem" >
+<section class="listagem"  >
     <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons"  >
         <a [routerLink]="['details', pokemon.status.id]"  class="pokemon" *ngIf="pokemon.status"  >
-            <section class="poke-stats">
+            <section class="poke-stats" lazyLoad="toLoad=true">
                 <ul>
                     <div class="bounce-in-right">{{pokemon.status.id}}</div>
                     <div class="tipo2 bounce-in-left" *ngFor="let value of pokemon.status.types">
